@@ -1,0 +1,9 @@
+torch ninja tqdm zstandard
+transformers
+numpy
+tqdm
+zstandard
+datasets
+
+
+pip install transformers==1.25.0

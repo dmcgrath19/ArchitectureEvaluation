@@ -1,0 +1,36 @@
+livebench/log
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info
+dist
+.venv
+
+# Log
+*.log
+*.log.*
+#*.json
+!playground/deepspeed_config_s2.json
+!playground/deepspeed_config_s3.json
+*.jsonl
+
+# Editor
+.idea
+*.swp
+
+# Other
+.DS_Store
+wandb
+output
+*_strict.jsonl
+
+# Data
+*.pkl
+*.csv
+
+results/*
+runs/*
+move_data.md
+# Build
+build

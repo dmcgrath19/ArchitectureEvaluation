@@ -1,0 +1,7 @@
+ArchitectureExtraction/*
+sample_logs/*
+local-data/*
+*.log
+*.csv
+*.err
+ArchitectureExtraction*
