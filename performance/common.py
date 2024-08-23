@@ -16,7 +16,7 @@ from typing import Optional
 import openai
 import anthropic
 
-from livebench.model.model_adapter import (
+from performance.model.model_adapter import (
     get_conversation_template,
     ANTHROPIC_MODEL_LIST,
     OPENAI_MODEL_LIST,

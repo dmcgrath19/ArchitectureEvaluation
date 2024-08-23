@@ -4,6 +4,3 @@ numpy
 tqdm
 zstandard
 datasets
-
-
-pip install transformers==1.25.0

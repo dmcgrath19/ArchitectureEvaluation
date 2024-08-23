@@ -13,7 +13,7 @@ import openai
 import shortuuid
 import tqdm
 
-from livebench.common import (
+from performance.common import (
     reorg_answer_file,
     get_categories_tasks,
     get_hf_dataset,
@@ -28,10 +28,10 @@ from livebench.common import (
     chat_completion_cohere,
     LIVE_BENCH_DATA_SUPER_PATH,
 )
-from livebench.model.model_adapter import get_conversation_template, ANTHROPIC_MODEL_LIST
-from livebench.model.model_adapter import GOOGLE_GENERATIVEAI_MODEL_LIST, VERTEX_MODEL_LIST
-from livebench.model.model_adapter import MISTRAL_MODEL_LIST
-from livebench.model.model_adapter import COHERE_MODEL_LIST
+from performance.model.model_adapter import get_conversation_template, ANTHROPIC_MODEL_LIST
+from performance.model.model_adapter import GOOGLE_GENERATIVEAI_MODEL_LIST, VERTEX_MODEL_LIST
+from performance.model.model_adapter import MISTRAL_MODEL_LIST
+from performance.model.model_adapter import COHERE_MODEL_LIST
 
 
 def get_answer(

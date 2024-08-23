@@ -14,22 +14,22 @@ import numpy as np
 from tqdm import tqdm
 
 # todo: find a better solution than all these imports. This is not good practice. 
-from livebench.process_results.data_analysis.tablereformat.utils import table_process_results
-from livebench.process_results.data_analysis.cta.utils import cta_process_results
-from livebench.process_results.data_analysis.tablejoin.utils import joinmap_process_results
-from livebench.process_results.reasoning.web_of_lies_v2.utils import web_of_lies_process_results
-from livebench.process_results.reasoning.house_traversal.utils import house_traversal_process_results
-from livebench.process_results.reasoning.zebra_puzzle.utils import zebra_puzzle_process_results
-from livebench.process_results.math.math_competitions.utils import mathcontest_process_results,aime_process_results 
-from livebench.process_results.math.olympiad.utils import proof_rearrangement_process_results
-from livebench.process_results.math.AMPS_Hard.utils import amps_hard_process_results 
-from livebench.process_results.writing.plot_unscrambling.utils import plot_unscrambling_process_results
-from livebench.process_results.writing.typos.utils import typos_process_results
-from livebench.process_results.writing.connections.utils import connections_process_results
-from livebench.process_results.coding.utils import LCB_generation_process_results
-from livebench.process_results.instruction_following.utils import instruction_following_process_results
+from performance.process_results.data_analysis.tablereformat.utils import table_process_results
+from performance.process_results.data_analysis.cta.utils import cta_process_results
+from performance.process_results.data_analysis.tablejoin.utils import joinmap_process_results
+from performance.process_results.reasoning.web_of_lies_v2.utils import web_of_lies_process_results
+from performance.process_results.reasoning.house_traversal.utils import house_traversal_process_results
+from performance.process_results.reasoning.zebra_puzzle.utils import zebra_puzzle_process_results
+from performance.process_results.math.math_competitions.utils import mathcontest_process_results,aime_process_results 
+from performance.process_results.math.olympiad.utils import proof_rearrangement_process_results
+from performance.process_results.math.AMPS_Hard.utils import amps_hard_process_results 
+from performance.process_results.writing.plot_unscrambling.utils import plot_unscrambling_process_results
+from performance.process_results.writing.typos.utils import typos_process_results
+from performance.process_results.writing.connections.utils import connections_process_results
+from performance.process_results.coding.utils import LCB_generation_process_results
+from performance.process_results.instruction_following.utils import instruction_following_process_results
 
-from livebench.common import (
+from performance.common import (
     load_questions,
     load_model_answers,
     check_data,

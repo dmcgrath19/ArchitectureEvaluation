@@ -2,7 +2,7 @@ import json
 import os
 from tqdm import tqdm
 
-from livebench.common import (
+from performance.common import (
     get_categories_tasks,
     load_questions,
     LIVE_BENCH_DATA_SUPER_PATH,

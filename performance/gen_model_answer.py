@@ -14,7 +14,7 @@ import shortuuid
 import torch
 from tqdm import tqdm
 
-from livebench.common import (
+from performance.common import (
     reorg_answer_file,
     get_categories_tasks,
     get_hf_dataset,
@@ -22,7 +22,7 @@ from livebench.common import (
     load_questions,
     LIVE_BENCH_DATA_SUPER_PATH,
 )
-from livebench.model import load_model, get_conversation_template
+from performance.model import load_model, get_conversation_template
 from fastchat.utils import str_to_torch_dtype
 
 
