@@ -6,7 +6,7 @@ Training Data Memorization \& Performance for Large Language Model Architectures
 The folders are correspond to each chapter of experiments within the paper, with the original repos(from the papers of original codes/attacks) that were adapted for this research linked as well.
 
 ## [Prefix Attacks](prefixattacks/)
-Original Repo: [here](https://github.com/ftramer/LM_Memorization)
+Based on: [Carlini et. al's work](https://github.com/ftramer/LM_Memorization)
 
 
 ```
@@ -16,7 +16,7 @@ where model1 is the reference larger model and model 2 is the actual model being
 
 
 ## [LiveBench](performance/)
-Original Repo: [here](https://github.com/livebench/livebench)
+Based on: [livebench benchmark](https://github.com/livebench/livebench)
 ```
 pip install torch packaging # These need to be installed prior to other dependencies.
 pip install -e .
@@ -45,7 +45,7 @@ python show_livebench_results.py
 
 
 ## [Membership Inference Attacks](mia/)
-Original Repo [here](https://github.com/zjysteven/mink-plus-plus/)
+Based on: [Mink++ repo](https://github.com/zjysteven/mink-plus-plus/)
 
 - `run.py` will run the Min-K% and Min-K%++ attack on the WikiMIA dataset, corresponding perturbed dataset and specified model.
 
