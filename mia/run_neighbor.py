@@ -33,6 +33,7 @@ parser.add_argument(
         'WikiMIA_length128_paraphrased', 
     ]
 )
+parser.add_argument('--perturbed_dataset', type=str, default='WikiMIA_length32_perturbed')
 parser.add_argument('--half', action='store_true')
 parser.add_argument('--int8', action='store_true')
 args = parser.parse_args()
@@ -74,11 +75,8 @@ else:
     dataset = load_dataset('zjysteven/WikiMIA_paraphrased_perturbed', split=args.dataset)
 data = convert_huggingface_data_to_list_dic(dataset)
 
-perturbed_dataset = load_dataset(
-    'zjysteven/WikiMIA_paraphrased_perturbed', 
-    split=args.dataset + '_perturbed'
-)
-perturbed_data = convert_huggingface_data_to_list_dic(perturbed_dataset)
+perturbed_dataset = pd.read_csv(args.perturbed_dataset + '.csv')
+perturbed_data = perturbed_dataset.to_list()
 num_neighbors = len(perturbed_data) // len(data)
 
 # inference - get scores for each input
