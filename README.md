@@ -3,7 +3,12 @@
 #### This code is the basis for which the memorisation and performance for the paper:
 Training Data Memorization \& Performance for Large Language Model Architectures– Transformers vs. State Space Models
 
-The folders are correspond to each chapter of experiments within the paper, with the original repos(from the papers of original codes/attacks) that were adapted for this research linked as well.
+The folders correspond to each chapter of experiments within the paper. The original repositories (from the papers detailing the original codes and attacks) that were adapted for this research are also linked.
+
+The primary evaluation ran between
+[Pythia](https://huggingface.co/collections/EleutherAI/pythia-scaling-suite-64fb5dfa8c21ebb3db7ad2e1) and
+[Mamba](https://huggingface.co/collections/state-spaces/transformers-compatible-mamba-65e7b40ab87e5297e45ae406) that were both streamed from HuggingFace.
+
 
 ## [Prefix Attacks](prefixattacks/)
 Based on: [Carlini et. al's work](https://github.com/ftramer/LM_Memorization)
@@ -13,6 +18,9 @@ Based on: [Carlini et. al's work](https://github.com/ftramer/LM_Memorization)
 python main.py --N 1000 --batch-size 10 --model1 path/to/pythia-2.8b --model2 path/to/pythia-160m --corpus-path monology/pile-uncopyrighted
 ```
 where model1 is the reference larger model and model 2 is the actual model being examined
+
+Dataset for 
+[The Pile](https://huggingface.co/datasets/monology/pile-uncopyrighted) was streamed from HuggingFace.
 
 
 ## [LiveBench](performance/)
@@ -58,3 +66,5 @@ python run_.py --model EleutherAI/pythia-160m --dataset WikiMIA_length32 --pertu
 ``` 
 python run_neighbor.py --model EleutherAI/pythia-160m --dataset WikiMIA_length32
 ```
+
+[WikiMIA dataset](https://huggingface.co/datasets/swj0419/WikiMIA)  was streamed from HuggingFace.

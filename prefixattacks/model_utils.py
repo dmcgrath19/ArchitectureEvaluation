@@ -44,9 +44,9 @@ def parse_local(path):
     return file_content
 
 
-def parse_splitted(path, subset='default', max_examples=100000, start_seed=42):
+def parse_subset(path, subset='default', max_examples=100000, start_seed=42):
     """
-    This is for parsing the PileSplitted dataset.
+    This is for parsing the PileSplitted dataset (by subset).
     """
     print("Streaming the splitted pile")
     
@@ -71,9 +71,9 @@ def parse_splitted(path, subset='default', max_examples=100000, start_seed=42):
     return all_texts
 
 
-def parse_wmt_splitted(path, split_set='train', start_seed=33):
+def parse_train_splitted(path, split_set='train', start_seed=33):
     """
-    This is for getting data from KaiNylund/WMT-year-splits
+    This is for getting data from 
     unseen data for the model serving as a base for perplexity
     """
 

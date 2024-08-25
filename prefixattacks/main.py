@@ -7,7 +7,7 @@ import csv
 from datasets import load_dataset
 from transformers import MambaForCausalLM, AutoTokenizer, AutoModelForCausalLM
 from tqdm import tqdm
-from model_utils import calculate_perplexity, print_best, parse_pilecorpus, parse_splitted, parse_wmt_splitted, parse_local, device
+from model_utils import calculate_perplexity, print_best, parse_pilecorpus, parse_subset, parse_train_splitted, parse_local, device
 
 def main(args):
     print(f"Using device: {device}")
@@ -17,10 +17,10 @@ def main(args):
 
     if args.is_local:
         ds = parse_local(path=args.corpus_path)
-    elif args.is_splitted:
-        ds= parse_splitted(path=args.corpus_path, subset=args.corpus_subset)
-    elif args.is_wmt:
-        ds= parse_wmt_splitted(path=args.corpus_path, split_set=args.split)
+    elif args.is_subset:
+        ds= parse_subset(path=args.corpus_path, subset=args.corpus_subset)
+    elif args.is_train:
+        ds= parse_train_splitted(path=args.corpus_path, split_set=args.split)
     else:
         ds= parse_pilecorpus(path = args.corpus_path, start_seed=args.random_seed)
 
@@ -212,11 +212,10 @@ def parse_arguments(argv):
     parser.add_argument('--random-seed', type=int, required=False, help="Random seed for dataset shuffling")
     parser.add_argument('--is-mamba', action='store_true', help="Determine type of tokeniser")
     parser.add_argument('--split', type=str, required=False, help="Split for dataset")
-    parser.add_argument('--is-splitted', action='store_true', help="Determine type of dataset parsing")
-    parser.add_argument('--is-wmt',  action='store_true', help="Determine type of dataset parsing")
+    parser.add_argument('--is-subset', action='store_true', help="Determine type of dataset parsing")
+    parser.add_argument('--is-train',  action='store_true', help="Determine type of dataset parsing")
     parser.add_argument('--is-local',action='store_true', help="local text file")
     parser.add_argument('--input-len', type=int, default=150, help="Default length for input prompt")
-    parser.add_argument('--is-rwkv', action='store_true', help="Special load for model")
     parser.add_argument('--is-bltm', action='store_true', help="Special load for model")
 
 
